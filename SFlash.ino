@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-//    To do: finish(), complete class Seq
+//    To do: void finish(), void checkCorrect(),  complete class Seq, 
 //
 //
 //
@@ -64,13 +64,11 @@ private:
 public:
   Seq(void){
     sequence = new Color[0];
-    userInput = new Color[0];
     sizee = 0;
     utils = -1;
   }
   Seq(int elements){
     sequence = new Color[elements];
-    userInput = new Color[elements];
     sizee = elements;
     utils = 0;
   }
@@ -85,26 +83,6 @@ public:
     return result;
   }
 
-  bool addUserInput(Color color){
-    bool result = false;
-
-    if (utils+1 = sizee){
-      userInput[utils] = color;
-      checkCorrect();
-      result = true;
-    }
-
-    return result;
-  }
-
-  // If any input was incorrect finish the game;
-  void checkCorrect(){
-    for (int i = 0; i < utils; i++){
-      if (sequence[i] != userInput[i]){
-        finish();
-      }
-    }
-  }
 
   
 };
