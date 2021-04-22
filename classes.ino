@@ -1,12 +1,17 @@
+
 // green -> 0
 // yellow -> 1
 // Blue -> 2
 // Red -> 3
+
+
 #define GREEN 0
 #define YELLOW 1
 #define BLUE 2
 #define RED 3
 #define DEFAULT_LEVELS 15
+
+
 // Leds (OUTPUTS)
 const int GreenLed = 3;
 const int YellowLed = 4;
