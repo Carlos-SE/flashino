@@ -26,6 +26,11 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  int i;
+
+  for (i = 0; i < DEFAULT_LEVELS; i++){
+    simon.displaySeq(i);
+    simon.readInput(i);
+  }
 
 }
