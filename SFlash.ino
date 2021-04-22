@@ -30,7 +30,9 @@ void loop() {
 
   for (i = 0; i < DEFAULT_LEVELS; i++){
     simon.displaySeq(i);
-    simon.readInput(i);
+    //simon.readInput(i);
   }
+
+  delay(10000);
 
 }
