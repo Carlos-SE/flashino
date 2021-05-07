@@ -104,14 +104,27 @@ public:
     return sequence[i];
   }
 
+  void randomize(){
+    int tam = 0;
+    int cValue;
+    
+    while (tam < sizee){
+      cValue = random(0,4);
+      Color c(cValue);
+
+      addColor(c);
+      
+      tam++;
+    }
+  }
+
   void displaySeq(int l){
     int i, j;
     int colorLed;
     Color c;
 
     for (i = 0; i < l; i++){
-      for (j = 0; j <= i; j++){
-        c = getSeqColor(j);
+        c = getSeqColor(i);
 
         if (c.getValue() == GREEN){
           colorLed = GreenLed;
@@ -130,8 +143,6 @@ public:
         delay(500);
         digitalWrite(colorLed, LOW);
         delay(500);
-      }
+      
     }
   }
-  
-};

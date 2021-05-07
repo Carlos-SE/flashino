@@ -1,17 +1,7 @@
-#include "classes.ino"
-
+Seq simon(DEFAULT_LEVELS);
+  
 
 void setup() {
-
-  int i;
-
-  Seq simon(DEFAULT_LEVELS);
-  
-  //Generates the color sequence
-  for (i = 0; i < DEFAULT_LEVELS; i++){
-    Color c;
-    simon.addColor(c);
-  }
 
   pinMode(GreenLed, OUTPUT);
   pinMode(YellowLed, OUTPUT);
@@ -23,14 +13,23 @@ void setup() {
   pinMode(BlueB, INPUT);
   pinMode(RedB, INPUT);
 
+  //Generates the color sequence
+  /*for (int i = 0; i < DEFAULT_LEVELS; i++){
+    Color c;
+    simon.addColor(c);
+  }*/
+
 }
 
-void loop() {
-  int i;
 
-  for (i = 0; i < DEFAULT_LEVELS; i++){
+void loop() {
+
+  //simon.randomize();
+  
+  for (int i = 0; i < DEFAULT_LEVELS; i++){
     simon.displaySeq(i);
     //simon.readInput(i);
+    delay(1000);
   }
 
   delay(10000);
