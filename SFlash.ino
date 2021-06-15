@@ -1,3 +1,5 @@
+#include "classes.h"
+
 Seq simon(DEFAULT_LEVELS);
   
 
